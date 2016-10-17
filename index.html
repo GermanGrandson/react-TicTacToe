@@ -1,0 +1,57 @@
+<html>
+  <head>
+
+    <style>
+      .board{
+        display: flex;
+        width: 600px;
+        height: 600px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+
+      .square{
+        height: 200px;
+        width: 200px;
+        box-sizing: border-box;
+        border: 5px solid black;
+      }
+
+      .square:hover{
+        background-color: #BADA55;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+    <h1>Hello World!</h1>
+
+    <div class='board'>
+      <div class='square'></div>
+      <div class='square'></div>
+      <div class='square'></div>
+      <div class='square'></div>
+      <div class='square'></div>
+      <div class='square'></div>
+      <div class='square'></div>
+      <div class='square'></div>
+      <div class='square'></div>
+    </div>
+
+  </body>
+
+  <script>
+    var playerOne = 'X'
+    var playerTwo = 'O'
+    var currentTurn = playerOne
+    var board = document.querySelector('.board')
+    board.addEventListener('click', function(e){
+      e.target.innerHTML = currentTurn
+    })
+
+  </script>
+
+</html>
